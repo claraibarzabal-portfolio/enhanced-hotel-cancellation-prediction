@@ -7,6 +7,27 @@ This repository presents a detailed exploration into predicting hotel booking ca
 
 This project delves into predicting hotel booking cancellations with an enriched feature set, including the novel incorporation of room type match, lead time, and various interactions. Through meticulous feature engineering and model evaluation, this study unveils the nuanced influences on cancellation probabilities.
 
+## Data Preprocessing and Avoiding Data Leakage
+Before diving into the feature engineering and model development phases, it's crucial to address two key aspects: the correct sequence of data splitting and transformation, and the measures taken to prevent data leakage. This section outlines our approach to these challenges.
+
+### Data Leakage Prevention
+Data leakage can severely impact model performance by providing the model with information it wouldn't have in real-world scenarios. We've taken measures to prevent leakage by:
+
+* Excluding predictive information: Certain variables, such as 'reservation_status,' directly reflect the target variable and were removed from the dataset.
+* Avoiding test/validation data in training: Ensuring that the model is trained exclusively on the training set prevents it from learning patterns specific to the test or validation sets.
+
+### Splitting Before Transforming
+To ensure the integrity of our model:
+
+**Split the dataset first:** This divides the data into training, testing, and validation sets. It's essential to perform this step before any data transformation to avoid inadvertently introducing bias or leakage.
+**Feature Transformation:** Transformations like one-hot encoding, scaling, and balancing (through oversampling or subsampling) are applied only after the split. This approach prevents data leakage by ensuring that transformations do not use information from the test/validation sets.
+
+### Handling Imbalanced Data
+Our project also addresses the challenge of imbalanced data, common in scenarios like fraud detection where one class significantly outnumbers the other. Our strategy involves:
+
+* Maintaining Real-world Distribution: The test set reflects the real-world class distribution to ensure the model's performance is evaluated accurately.
+* Applying Balancing Techniques on the Training Set: Techniques like oversampling or subsampling are applied post-split, solely on the training set, to avoid skewing the model's evaluation.
+
 ## Feature Engineering
 
 ### Room Type Match
@@ -166,7 +187,7 @@ Before diving into the analysis, ensure your environment is properly set up. Her
 
 ## Conclusion
 
-The iterative process of feature exploration, inclusion, and interaction analysis has significantly enhanced the model's predictive accuracy. This project illustrates the importance of nuanced feature engineering in developing more precise and reliable predictive models.
+Through the process of feature engineering, model evaluation, and optimization, this project has improved the prediction of hotel booking cancellations. Our approach underscores the importance of careful feature selection and the iterative refinement of models to enhance predictive accuracy. While this study provides valuable insights into the factors influencing hotel booking cancellations, it also highlights the complexities of predictive modeling in a real-world context. The findings serve as a foundational step towards more sophisticated analyses and applications in the hospitality industry, emphasizing the potential of data-driven strategies to inform and improve decision-making processes.
 
 ## Acknowledgements
 
