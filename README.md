@@ -7,6 +7,16 @@ This repository presents a detailed exploration into predicting hotel booking ca
 
 This project delves into predicting hotel booking cancellations with an enriched feature set, including the novel incorporation of room type match, lead time, and various interactions. Through meticulous feature engineering and model evaluation, this study unveils the nuanced influences on cancellation probabilities.
 
+**Objective:** Help teh hotel identify guests more likely to cancel their bookings, enabling the hotel to manage cancellations more effectively and maintain occupancy rates during the busy summer vacation period.
+
+**Data:** The analysis utilizes a dataset containing reservations for two branches of the hotel: a city hotel and a resort hotel. The dataset includes detailed reservation attributes, such as booking status, lead time, arrival dates, guest information, room assignments, special requests, and more.
+
+**Challenges:** With a concern over last-minute cancellations, the hotel aims to use data-driven insights to predict cancellation probabilities. This project explores various machine learning techniques to tackle this challenge, focusing on metrics that capture the model's ability to identify potential cancellations accurately.
+
+**Outcome:** By accurately predicting cancellations, Hotel Facilito can proactively manage its reservations, ensuring a better experience for both the hotel and its guests.
+
+For a detailed exploration of the data attributes, model development, and analytical findings, please refer to the accompanying Colab notebooks.
+
 ## Data Preprocessing and Avoiding Data Leakage
 Before diving into the feature engineering and model development phases, it's crucial to address two key aspects: the correct sequence of data splitting and transformation, and the measures taken to prevent data leakage. This section outlines our approach to these challenges.
 
