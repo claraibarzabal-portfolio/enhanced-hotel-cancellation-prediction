@@ -1,0 +1,10 @@
+pandas==2.0.3
+scikit-learn==1.2.2
+jupyter==1.0.0
+jupyterlab==4.0.0
+matplotlib==3.7.1
+Pillow==9.4.0
+numpy==1.25.2
+joblib==1.3.2
+mlflow
+ydata-profiling
